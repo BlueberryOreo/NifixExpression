@@ -113,7 +113,8 @@ int Expression::next()
 			if (cmp) {
 				if (op != '+' && op != '-' && op != '*' && op != '/' 
 					&& op != '(' && op != ')' && op != '#') throw OPERATOR_ERROR;
-				//if (!ops.empty() && ops.top() == '(' && op != ')') throw SYNTAX_ERROR;
+				if (!ops.empty() && ops.top() == '(' && 
+					(exp[nowstp - 1][0] > '9' || exp[nowstp - 1][0] < '0')) throw SYNTAX_ERROR; // 括号后直接跟了运算符
 				ops.push(op);
 				//cout << "push here " << endl;
 			}
