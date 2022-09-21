@@ -134,7 +134,7 @@ int Expression::next()
 		nums.pop();
 		if (!nums.empty()) throw SYNTAX_ERROR;
 		showNowStp();
-		cout << "计算完成，答案为：" << ans << endl;
+		cout << "计算完成，答案为：" << fixed << setprecision(8) << ans << endl;
 		return 1;
 	}
 	else {
