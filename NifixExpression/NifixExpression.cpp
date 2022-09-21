@@ -9,43 +9,6 @@ string wizard() {
 	return ret;
 }
 
-// 分割输入的表达式
-//void split(string& input, vector<string>& expression) {
-//	string tmp = "";
-//	for (int i = 0; i < input.size(); i++) {
-//		if (input[i] == ' ') continue;
-//		if (input[i] == '.' || ('0' <= input[i] && input[i] <= '9')) {
-//			tmp.push_back(input[i]);
-//		}
-//		else {
-//			if (!tmp.empty()) {
-//				expression.push_back(tmp);
-//				tmp.clear();
-//			}
-//			expression.push_back(string(1, input[i]));
-//		}
-//	}
-//}
-
-// 输出一个向量
-//void output(vector<string>& v) {
-//	for (auto s : v) {
-//		cout << s << " ";
-//	}
-//	cout << endl;
-//}
-
-// 用^显示当前步
-//void showNowStep(int step, vector<string>& expression) {
-//	system("cls");
-//	cout << "当前步：" << endl;
-//	output(expression);
-//	for (int i = 0; i < min(step, (int)expression.size()); i++) {
-//		cout << string(expression[i].size() + 1, ' ');
-//	}
-//	cout << "^" << endl;
-//}
-
 // 主循环
 void process(Expression &exp) {
 	char ch;
